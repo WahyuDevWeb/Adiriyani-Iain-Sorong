@@ -1,0 +1,420 @@
+/* WAHYU RAMADHAN — responsive, dependency-light static portfolio */
+:root{color-scheme:dark;--bg:#080a12;--panel:rgba(17,21,35,.82);--line:rgba(167,177,255,.15);--text:#f5f6ff;--muted:#a2a8bf;--violet:#a78bfa;--cyan:#67e8f9;--pink:#fb7185}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}.ambient{position:fixed;z-index:-2;width:420px;height:420px;border-radius:50%;filter:blur(100px);opacity:.18;pointer-events:none}.ambient-one{top:-170px;left:-120px;background:#7c3aed}.ambient-two{right:-180px;top:35%;background:#0891b2}.grid-overlay{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(150,160,220,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(150,160,220,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 90%)}.shell{width:min(100% - 32px,720px);margin:0 auto;padding:18px 0 32px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:8px 4px 22px}.brand{display:flex;gap:10px;align-items:center;font-weight:850;letter-spacing:.08em}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(167,139,250,.55);border-radius:11px;background:linear-gradient(135deg,rgba(167,139,250,.2),rgba(103,232,249,.08));color:var(--cyan)}.brand-dot,.footer-brand span{color:var(--cyan)}.status,.eyebrow,.section-kicker,.overline,.small-label,.footer-note{font-size:.68rem;letter-spacing:.16em;font-weight:750;color:var(--muted)}.status{display:flex;align-items:center;gap:8px}.status-dot{width:7px;height:7px;border-radius:50%;background:#6ee7b7;box-shadow:0 0 12px #6ee7b7}.panel{position:relative;border:1px solid var(--line);border-radius:24px;background:var(--panel);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 24px 70px rgba(0,0,0,.22);overflow:hidden}.hero{text-align:center;padding:30px 30px 0}.hero:before{content:"";position:absolute;left:15%;right:15%;top:-100px;height:190px;background:rgba(124,58,237,.2);filter:blur(60px);pointer-events:none}.hero-topline{position:relative;display:flex;justify-content:space-between;align-items:center;gap:12px}.vip-chip{padding:6px 10px;border:1px solid rgba(251,191,36,.28);border-radius:999px;background:rgba(251,191,36,.08);color:#fcd978;font-size:.64rem;font-weight:800;letter-spacing:.1em}.profile-frame{position:relative;width:142px;height:142px;margin:34px auto 20px;display:grid;place-items:center}.profile-halo{position:absolute;inset:-7px;border-radius:50%;background:conic-gradient(from 20deg,var(--cyan),#8b5cf6,var(--pink),#facc15,var(--cyan));animation:rotate 9s linear infinite}.profile-halo:after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--bg)}.avatar{position:relative;width:132px;height:132px;object-fit:cover;border-radius:50%;border:3px solid #17192b;z-index:1}.online-mark{position:absolute;z-index:2;right:4px;bottom:8px;width:17px;height:17px;border:3px solid #111523;border-radius:50%;background:#6ee7b7}.overline{margin:0 0 6px;color:var(--cyan)}h1{margin:0;font-size:clamp(1.8rem,7vw,3rem);line-height:1.15;letter-spacing:-.055em;font-weight:900}h1 span,.section-heading h2 span{background:linear-gradient(100deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}.role{display:flex;justify-content:center;align-items:center;gap:9px;flex-wrap:wrap;color:#d8d9ee;font-size:.9rem;margin:15px 0 10px}.role-icon{color:var(--cyan);font-size:1.15rem}.separator{color:#666d87}.intro{max-width:440px;margin:0 auto;color:var(--muted);font-size:.93rem}.hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px 0 28px}.button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:44px;padding:11px 17px;border-radius:12px;font-size:.84rem;font-weight:750;transition:transform .2s,border-color .2s,filter .2s}.button:hover,.social-link:hover{transform:translateY(-2px);filter:brightness(1.08)}.button-primary{background:linear-gradient(105deg,#8b5cf6,#6366f1);box-shadow:0 8px 25px rgba(99,102,241,.22)}.button-quiet{border:1px solid var(--line);background:rgba(255,255,255,.025)}.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);padding:19px 0 20px;gap:8px}.hero-stats div{display:flex;flex-direction:column;gap:2px}.hero-stats div+div{border-left:1px solid var(--line)}.hero-stats strong{font-size:1.12rem;letter-spacing:.02em}.hero-stats span{font-size:.58rem;letter-spacing:.12em;color:var(--muted);font-weight:750}.section-panel{padding:25px;margin-top:17px}.section-heading{margin-bottom:19px}.section-kicker{color:var(--cyan)}.section-heading h2{font-size:1.45rem;letter-spacing:-.04em;margin:4px 0 0;line-height:1.3}.section-subtitle{color:var(--muted);font-size:.85rem;margin:8px 0 0}.feature-list{display:grid;gap:10px}.feature{display:grid;grid-template-columns:44px 1fr 18px;gap:13px;align-items:start;padding:15px;border:1px solid rgba(255,255,255,.07);border-radius:15px;background:rgba(255,255,255,.025)}.feature-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;font-size:1.3rem}.purple{color:#c4b5fd;background:rgba(167,139,250,.12)}.cyan{color:var(--cyan);background:rgba(103,232,249,.1)}.feature h3{margin:1px 0 5px;font-size:.95rem}.feature p{margin:0;color:var(--muted);font-size:.81rem;line-height:1.55}.feature-arrow{color:#777f9c}.personal-card{display:flex;align-items:center;gap:18px;padding:18px;border:1px solid rgba(251,113,133,.2);border-radius:16px;background:linear-gradient(120deg,rgba(251,113,133,.07),rgba(167,139,250,.05))}.heart-icon{display:grid;place-items:center;flex-shrink:0;width:48px;height:48px;border-radius:14px;background:rgba(251,113,133,.12);color:#fda4af;font-size:1.8rem}.personal-details{display:grid;grid-template-columns:1fr;gap:1px}.small-label{font-size:.58rem;margin-top:6px}.personal-details strong{font-size:.9rem}.button-pink{background:rgba(251,113,133,.1);border:1px solid rgba(251,113,133,.3);color:#fecdd3}.full-button{width:100%;margin-top:12px}.social-list{display:grid;gap:9px}.social-link{display:grid;grid-template-columns:42px 1fr 20px;align-items:center;gap:12px;padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.025);transition:transform .2s,filter .2s}.social-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;font-size:1.2rem;background:rgba(255,255,255,.055)}.social-link strong,.social-link small{display:block}.social-link strong{font-size:.9rem}.social-link small{color:var(--muted);font-size:.73rem;margin-top:1px}.social-arrow{color:#a5abc2}.whatsapp .social-icon{color:#6ee7a1;background:rgba(37,211,102,.1)}.channel .social-icon{color:#5eead4}.telegram .social-icon{color:#7dd3fc;background:rgba(14,165,233,.1)}.tiktok .social-icon{color:#fda4af}.youtube .social-icon{color:#f87171}footer{text-align:center;padding:27px 8px 0;color:var(--muted)}.footer-brand{font-size:1.1rem;font-weight:900;letter-spacing:.08em}.footer-brand+ p{font-size:.73rem;margin:7px 0}.footer-note{font-size:.55rem;opacity:.65}@keyframes rotate{to{transform:rotate(360deg)}}@media(min-width:600px){.shell{padding-top:28px}.hero{padding:34px 40px 0}.section-panel{padding:30px}.feature-list{grid-template-columns:1fr 1fr}.feature{grid-template-columns:40px 1fr}.feature-arrow{display:none}}@media(max-width:380px){.shell{width:calc(100% - 20px)}.hero{padding:22px 16px 0}.section-panel{padding:19px}.status{font-size:.55rem}.hero-topline{align-items:flex-start}.vip-chip{font-size:.55rem}.button{padding:10px 12px;font-size:.78rem}.hero-stats span{font-size:.5rem}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Neon profile refresh: Personal, Friendship, and social cards */
+:root{--panel:rgba(12,16,34,.88);--line:rgba(105,126,255,.22);--violet:#8b5cf6;--cyan:#22d3ee;--pink:#e879f9}
+body{background:radial-gradient(ellipse at 8% 24%,rgba(91,33,182,.17),transparent 34%),radial-gradient(ellipse at 92% 62%,rgba(8,145,178,.13),transparent 36%),#050713}
+.panel{border:1px solid rgba(103,125,255,.25);border-radius:30px;background:linear-gradient(145deg,rgba(17,20,43,.94),rgba(8,12,27,.94));box-shadow:0 22px 70px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.025)}
+.section-panel{padding:27px;margin-top:20px}
+.section-heading{margin-bottom:21px}.section-heading h2{font-size:clamp(1.55rem,5vw,2rem);font-weight:850;letter-spacing:-.055em}.section-heading h2 span{background:linear-gradient(100deg,#60a5fa,#a78bfa 58%,#e879f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.section-kicker{font-size:.72rem;letter-spacing:.2em;color:#67e8f9}
+.personal-card{gap:20px;padding:22px;border-radius:25px;border:1px solid rgba(168,85,247,.32);background:linear-gradient(115deg,rgba(147,51,234,.11),rgba(30,64,175,.1) 65%,rgba(8,145,178,.07));min-height:176px}
+.tiktok-mark{display:grid;place-items:center;flex:0 0 76px;width:76px;height:76px;border-radius:23px;background:linear-gradient(145deg,#22213f,#101b3a);color:#fff;font-size:3.15rem;font-weight:900;text-shadow:-3px 0 #22d3ee,3px 2px #fb3f9b;line-height:1}
+.personal-details{gap:2px}.small-label{font-size:.68rem;letter-spacing:.17em;color:#a5a4d6;margin-top:7px}.personal-details strong{font-size:1.02rem;font-weight:800;margin-bottom:4px}
+.button-pink{min-height:58px;border:1px solid rgba(192,132,252,.4);border-radius:18px;background:linear-gradient(100deg,rgba(124,58,237,.16),rgba(219,39,119,.12));color:#f5d0fe;font-size:.95rem;letter-spacing:.01em}
+.friendship-panel{border-color:rgba(79,107,255,.34);background:linear-gradient(145deg,rgba(13,19,42,.96),rgba(8,13,29,.96))}
+.friendship-panel .section-heading{margin-bottom:20px}.friendship-panel .section-subtitle{font-size:.94rem;margin-top:7px}
+.friend-card{display:grid;grid-template-columns:76px minmax(0,1fr);align-items:center;gap:18px;padding:20px;border:1px solid rgba(139,92,246,.3);border-radius:25px;background:linear-gradient(115deg,rgba(147,51,234,.12),rgba(30,64,175,.11));transition:transform .2s,border-color .2s}
+.friend-card:hover{transform:translateY(-2px);border-color:rgba(34,211,238,.55)}
+.instagram-mark{display:grid;place-items:center;width:76px;height:76px;border-radius:22px;background:radial-gradient(circle at 30% 105%,#ffd776 0 15%,#ff7a45 35%,#e1306c 58%,#c135b8 76%,#5b51d8 100%);box-shadow:0 8px 26px rgba(193,53,184,.2)}
+.instagram-mark span{position:relative;width:43px;height:43px;border:4px solid white;border-radius:13px}.instagram-mark span:before{content:"";position:absolute;width:15px;height:15px;border:4px solid white;border-radius:50%;left:10px;top:10px}.instagram-mark span:after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:white;right:5px;top:5px}
+.friend-copy strong,.friend-copy small{display:block}.friend-copy strong{font-size:1.15rem;font-weight:850}.friend-copy small{font-size:.86rem;color:#aeb4d3;line-height:1.5;margin-top:3px}
+.button-instagram{min-height:58px;border:1px solid transparent;border-radius:18px;background:linear-gradient(#11152d,#11152d) padding-box,linear-gradient(100deg,#06b6f5,#7755ff,#e130c5) border-box;color:#fff;font-size:1rem;letter-spacing:.01em;box-shadow:0 8px 28px rgba(99,102,241,.12)}
+.instagram-mini{font-size:1.6rem;line-height:1;color:#fff}
+.full-button{gap:12px}
+.social-link{border-radius:19px;padding:15px 16px;background:linear-gradient(120deg,rgba(255,255,255,.035),rgba(99,102,241,.035));border-color:rgba(129,140,248,.14)}
+.social-icon{width:46px;height:46px;border-radius:15px}
+@media(max-width:420px){.section-panel{padding:21px}.personal-card{gap:14px;padding:17px}.tiktok-mark{flex-basis:62px;width:62px;height:62px;font-size:2.65rem;border-radius:19px}.friend-card{grid-template-columns:62px minmax(0,1fr);gap:14px;padding:16px}.instagram-mark{width:62px;height:62px;border-radius:19px}.instagram-mark span{transform:scale(.84)}.friend-copy strong{font-size:1.03rem}.friend-copy small{font-size:.78rem}}
+
+/* Official logo images supplied by the user */
+.tiktok-mark{overflow:hidden;padding:0;background:#000;border:1px solid rgba(255,255,255,.12)}
+.tiktok-mark img{display:block;width:100%;height:100%;object-fit:cover}
+.instagram-mark{overflow:hidden;background:transparent;padding:0}
+.instagram-mark img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.instagram-mini{display:inline-block;width:27px;height:27px;object-fit:cover;border-radius:8px;vertical-align:middle}
+.social-icon{overflow:hidden}
+.social-logo{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+
+
+/* ===== ULTRA NEON / GLASS VIP FINISH ===== */
+:root{
+  --neon-cyan:#00d9ff;
+  --neon-blue:#2677ff;
+  --neon-violet:#7547ff;
+  --neon-pink:#e12cff;
+  --glass:rgba(12,16,43,.84);
+}
+body{
+  background:
+    radial-gradient(ellipse at 4% 12%,rgba(100,30,190,.22),transparent 34%),
+    radial-gradient(ellipse at 96% 38%,rgba(0,104,255,.18),transparent 32%),
+    radial-gradient(ellipse at 48% 100%,rgba(113,24,170,.12),transparent 42%),
+    #030511;
+}
+.ambient{opacity:.3;filter:blur(110px)}
+.grid-overlay{
+  background-image:linear-gradient(rgba(88,115,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(88,115,255,.045) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+.shell{width:min(100% - 34px,950px);padding-top:24px}
+.topbar{padding:8px 5px 20px}
+.brand-mark{box-shadow:0 0 22px rgba(0,217,255,.17),inset 0 0 15px rgba(117,71,255,.2)}
+.panel{
+  border:1px solid rgba(76,111,255,.43);
+  border-radius:34px;
+  background:linear-gradient(145deg,rgba(11,16,42,.96),rgba(5,9,27,.96));
+  box-shadow:0 22px 70px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.055),0 0 28px rgba(39,89,255,.07);
+}
+.panel:after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(115deg,rgba(0,217,255,.045),transparent 30%,transparent 72%,rgba(117,71,255,.055));
+}
+.hero{padding:36px 38px 0}
+.hero:before{background:rgba(69,61,255,.27);filter:blur(75px)}
+.profile-halo{filter:drop-shadow(0 0 16px rgba(0,217,255,.3))}
+.avatar{box-shadow:0 0 28px rgba(55,106,255,.18)}
+h1 span,.section-heading h2 span{
+  background:linear-gradient(100deg,#159eff 5%,#7664ff 58%,#e23cff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.button{position:relative;overflow:hidden}
+.button-primary{
+  background:linear-gradient(105deg,#087dff,#713dff 62%,#a52cff);
+  box-shadow:0 0 24px rgba(50,99,255,.28),inset 0 1px 0 rgba(255,255,255,.2)
+}
+.button-quiet{border-color:rgba(105,132,255,.35);background:rgba(20,26,60,.65)}
+.section-panel{padding:30px;margin-top:22px}
+.section-heading{margin-bottom:22px}
+.section-heading h2{font-size:clamp(1.7rem,5vw,2.65rem);line-height:1.2}
+.section-kicker{font-size:.78rem;letter-spacing:.23em;color:#00e5ff}
+.section-heading:after{
+  content:"";display:block;width:132px;height:4px;margin-top:13px;border-radius:9px;
+  background:linear-gradient(90deg,#00d9ff,#397cff,#e12cff);
+  box-shadow:0 0 15px rgba(0,217,255,.35)
+}
+.section-subtitle{font-size:1rem;line-height:1.65;color:#b2b7e7}
+.feature,.social-link{
+  border:1px solid rgba(104,122,255,.24);
+  background:linear-gradient(125deg,rgba(32,35,83,.55),rgba(9,16,43,.7));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035)
+}
+.feature{border-radius:20px;padding:18px}
+.feature-icon{box-shadow:0 0 22px rgba(125,75,255,.12)}
+.personal-card{
+  position:relative;display:flex;align-items:stretch;gap:20px;
+  min-height:190px;padding:24px 22px;border-radius:30px;
+  border:1px solid rgba(135,83,255,.48);
+  background:linear-gradient(115deg,rgba(48,24,100,.42),rgba(16,25,69,.72) 62%,rgba(10,30,77,.58));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 0 28px rgba(104,54,255,.1)
+}
+.personal-avatar{
+  display:grid;place-items:center;flex:0 0 112px;width:112px;height:112px;align-self:flex-start;
+  border-radius:27px;background:linear-gradient(140deg,#7028d9,#1649a9);
+  box-shadow:0 0 28px rgba(87,50,255,.25),inset 0 1px 0 rgba(255,255,255,.2)
+}
+.personal-avatar svg{width:66px;height:66px;fill:none;stroke:#fff;stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round}
+.personal-divider{width:2px;flex:0 0 2px;align-self:stretch;background:linear-gradient(180deg,#8c5bff,#315fff);box-shadow:0 0 12px rgba(112,86,255,.38)}
+.personal-details{align-content:center;gap:2px;min-width:0}
+.small-label{font-size:.76rem;letter-spacing:.2em;color:#aaa0ff;margin-top:7px}
+.personal-details strong{font-size:clamp(1rem,2.4vw,1.32rem);font-weight:800;margin-bottom:4px}
+.button-pink,.button-instagram{
+  min-height:62px;border:2px solid transparent;border-radius:999px;
+  background:linear-gradient(#0b1030,#0b1030) padding-box,linear-gradient(100deg,#078dff,#7645ff 54%,#e12cff) border-box;
+  color:#fff;font-size:1.03rem;font-weight:800;
+  box-shadow:0 0 22px rgba(88,55,255,.13),inset 0 0 24px rgba(105,44,255,.1)
+}
+.button-pink{background:linear-gradient(100deg,rgba(20,26,75,.96),rgba(52,15,83,.96)) padding-box,linear-gradient(100deg,#078dff,#7645ff 54%,#e12cff) border-box}
+.cta-logo{width:32px;height:32px;object-fit:cover;border-radius:50%}
+.cta-arrow{font-size:1.6rem;font-weight:400;margin-left:8px;line-height:1}
+.friendship-panel{
+  border-color:rgba(72,106,255,.46);
+  background:linear-gradient(145deg,rgba(12,20,49,.97),rgba(7,12,31,.97))
+}
+.friend-card{
+  grid-template-columns:112px minmax(0,1fr) 66px;gap:20px;padding:24px;
+  border-radius:30px;border:1px solid rgba(134,91,255,.44);
+  background:linear-gradient(115deg,rgba(34,23,87,.5),rgba(12,23,63,.72));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 0 24px rgba(89,64,255,.08)
+}
+.instagram-mark{width:112px;height:112px;border-radius:27px;box-shadow:0 0 24px rgba(225,44,255,.2)}
+.friend-copy strong{font-size:1.35rem}
+.friend-copy small{font-size:.95rem;color:#aaaee0;line-height:1.55}
+.friend-round-arrow{
+  display:grid;place-items:center;width:66px;height:66px;align-self:center;border-radius:50%;
+  border:2px solid transparent;background:linear-gradient(#0b1230,#0b1230) padding-box,linear-gradient(135deg,#a02cff,#168eff) border-box;
+  color:white;font-size:2rem;box-shadow:0 0 18px rgba(99,83,255,.2)
+}
+.button-instagram{background:linear-gradient(100deg,#091b4a,#261047) padding-box,linear-gradient(100deg,#078dff,#7645ff 54%,#e12cff) border-box}
+.social-list{gap:13px}
+.social-link{grid-template-columns:52px 1fr 24px;padding:17px 18px;border-radius:21px;transition:transform .22s,border-color .22s,box-shadow .22s}
+.social-link:hover{border-color:rgba(0,217,255,.55);box-shadow:0 0 24px rgba(0,145,255,.12)}
+.social-icon{width:50px;height:50px;border-radius:16px}
+footer{padding-top:32px}
+@media(max-width:560px){
+ .shell{width:calc(100% - 22px);padding-top:14px}
+ .hero{padding:25px 19px 0}
+ .section-panel{padding:22px 18px;margin-top:16px;border-radius:27px}
+ .personal-card{gap:13px;padding:18px 15px;min-height:0;border-radius:24px}
+ .personal-avatar{flex-basis:76px;width:76px;height:76px;border-radius:20px}
+ .personal-avatar svg{width:48px;height:48px}
+ .personal-divider{min-height:155px}
+ .small-label{font-size:.61rem;letter-spacing:.13em}
+ .personal-details strong{font-size:.95rem}
+ .button-pink,.button-instagram{min-height:55px;font-size:.91rem}
+ .friend-card{grid-template-columns:76px minmax(0,1fr) 44px;gap:12px;padding:15px;border-radius:24px}
+ .instagram-mark{width:76px;height:76px;border-radius:20px}
+ .friend-copy strong{font-size:1.05rem}
+ .friend-copy small{font-size:.76rem}
+ .friend-round-arrow{width:43px;height:43px;font-size:1.4rem}
+ .section-heading h2{font-size:clamp(1.55rem,7vw,2.1rem)}
+ .section-subtitle{font-size:.88rem}
+ .social-link{padding:13px;border-radius:18px}
+}
+@media(max-width:360px){
+ .personal-card{gap:10px;padding:15px 11px}
+ .personal-avatar{flex-basis:64px;width:64px;height:64px}
+ .personal-details strong{font-size:.88rem}
+ .friend-card{grid-template-columns:64px minmax(0,1fr) 38px;gap:9px;padding:12px}
+ .instagram-mark{width:64px;height:64px}
+ .friend-round-arrow{width:38px;height:38px}
+}
+
+
+/* Personal TikTok mark belongs in the avatar tile, not in the CTA */
+.personal-avatar.tiktok-avatar{overflow:hidden;padding:0;background:#05050b}
+.personal-avatar.tiktok-avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+
+/* Friendship details: same neon split-card language as Personal Corner */
+.friend-details-card{
+  display:grid;
+  grid-template-columns:112px 2px minmax(0,1fr);
+  align-items:stretch;
+  gap:20px;
+  cursor:default;
+}
+.friend-divider{
+  display:block;width:2px;min-height:112px;align-self:stretch;
+  background:linear-gradient(180deg,#d34cff,#5264ff);
+  box-shadow:0 0 13px rgba(130,83,255,.5);
+}
+.friend-details-card .friend-copy{
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  min-width:0;
+}
+.friend-details-card .friend-copy{gap:2px}
+.friend-details-card .small-label{margin-top:7px}
+.friend-details-card .friend-copy strong{
+  display:block;max-width:100%;font-size:clamp(1rem,2.4vw,1.32rem);line-height:1.6;margin-bottom:4px;
+  color:#f6f5ff;overflow-wrap:anywhere
+}
+.user-editable{
+  min-width:150px;outline:none;border-radius:6px;cursor:text;
+  transition:background .2s,box-shadow .2s;
+}
+.user-editable:focus{
+  background:rgba(72,92,255,.12);
+  box-shadow:0 0 0 5px rgba(72,92,255,.12);
+}
+.user-editable:empty:before{content:"Klik di sini untuk mengisi";color:#999dcc}
+.address-editable{font-weight:650}
+@media(max-width:560px){
+  .friend-details-card{
+    grid-template-columns:76px 2px minmax(0,1fr);
+    gap:13px;padding:17px
+  }
+  .friend-divider{min-height:120px}
+  .friend-details-card .friend-copy strong{font-size:.95rem}
+}
+@media(max-width:360px){
+  .friend-details-card{grid-template-columns:64px 2px minmax(0,1fr);gap:10px;padding:13px}
+  .friend-details-card .friend-copy strong{font-size:.88rem}
+}
+
+
+/* ===== GLOBAL NEON BALANCE: one consistent palette across the whole portfolio ===== */
+:root{
+  --neon-cyan:#00dcff;
+  --neon-blue:#287dff;
+  --neon-violet:#7650ff;
+  --neon-magenta:#df35ff;
+  --neon-border:rgba(83,112,255,.48);
+  --neon-glass:linear-gradient(145deg,rgba(11,17,43,.97),rgba(5,10,29,.97));
+  --neon-card:linear-gradient(115deg,rgba(28,25,78,.58),rgba(12,22,61,.78) 60%,rgba(17,15,57,.72));
+  --neon-edge:linear-gradient(100deg,var(--neon-cyan),var(--neon-blue) 38%,var(--neon-violet) 68%,var(--neon-magenta));
+}
+body{
+  background:
+    radial-gradient(ellipse at 5% 12%,rgba(107,43,210,.2),transparent 34%),
+    radial-gradient(ellipse at 96% 38%,rgba(0,116,255,.17),transparent 33%),
+    radial-gradient(ellipse at 50% 92%,rgba(177,36,255,.11),transparent 42%),
+    #030511;
+}
+.panel,
+.hero.panel,
+.section-panel,
+.personal-panel,
+.friendship-panel,
+#about,
+#connect{
+  border:1px solid var(--neon-border);
+  border-radius:32px;
+  background:var(--neon-glass);
+  box-shadow:0 22px 70px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.055),0 0 28px rgba(39,89,255,.075);
+}
+.panel:after{
+  background:linear-gradient(115deg,rgba(0,217,255,.045),transparent 30%,transparent 72%,rgba(117,71,255,.055));
+}
+.section-panel{padding:30px;margin-top:22px}
+.section-heading{margin-bottom:22px}
+.section-kicker{color:var(--neon-cyan);font-size:.78rem;letter-spacing:.23em}
+.section-heading h2 span,h1 span{
+  background:var(--neon-edge);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.section-heading:after{
+  content:"";display:block;width:132px;height:4px;margin-top:13px;border-radius:9px;
+  background:var(--neon-edge);box-shadow:0 0 15px rgba(0,217,255,.35);
+}
+.section-subtitle,.intro{color:#b2b7e7}
+.feature,.personal-card,.friend-card,.social-link{
+  border:1px solid rgba(112,104,255,.42);
+  border-radius:25px;
+  background:var(--neon-card);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 0 24px rgba(89,64,255,.075);
+}
+.feature{border-radius:20px;padding:18px}
+.feature-icon{box-shadow:0 0 22px rgba(125,75,255,.12)}
+.personal-card{
+  gap:20px;padding:24px 22px;min-height:190px;border-radius:30px;
+  border-color:rgba(134,91,255,.48);
+}
+.personal-avatar{
+  background:linear-gradient(140deg,#7028d9,#1649a9);
+  box-shadow:0 0 28px rgba(87,50,255,.25),inset 0 1px 0 rgba(255,255,255,.2);
+}
+.personal-divider,.friend-divider{
+  background:var(--neon-edge);
+  box-shadow:0 0 13px rgba(112,86,255,.42);
+}
+.small-label{color:#aaa0ff;font-size:.76rem;letter-spacing:.2em}
+.personal-details strong,.friend-details-card .friend-copy strong{color:#f6f5ff}
+.button-primary,.button-pink,.button-instagram{
+  min-height:60px;border:2px solid transparent;border-radius:999px;color:#fff;
+  background:linear-gradient(100deg,rgba(13,25,69,.97),rgba(37,15,75,.97)) padding-box,var(--neon-edge) border-box;
+  box-shadow:0 0 22px rgba(88,55,255,.14),inset 0 0 24px rgba(105,44,255,.1);
+  font-weight:800;
+}
+.button-primary{background:linear-gradient(100deg,#087dff,#713dff 62%,#a52cff);border:0}
+.button-quiet{border:1px solid rgba(105,132,255,.4);background:rgba(20,26,60,.65)}
+.button:hover,.social-link:hover{filter:brightness(1.12);box-shadow:0 0 24px rgba(0,145,255,.14)}
+.friendship-panel{border-color:var(--neon-border);background:var(--neon-glass)}
+.friend-details-card{border-color:rgba(134,91,255,.48);background:var(--neon-card)}
+.friend-details-card .friend-copy strong{font-size:clamp(1rem,2.4vw,1.32rem)}
+.social-link{
+  grid-template-columns:52px 1fr 24px;padding:17px 18px;border-radius:21px;
+  transition:transform .22s,border-color .22s,box-shadow .22s;
+}
+.social-link:hover{border-color:rgba(0,217,255,.58)}
+.social-icon{width:50px;height:50px;border-radius:16px}
+.brand-mark{
+  border-color:rgba(0,217,255,.48);
+  background:linear-gradient(135deg,rgba(0,217,255,.12),rgba(117,71,255,.18));
+  box-shadow:0 0 22px rgba(0,217,255,.17),inset 0 0 15px rgba(117,71,255,.2);
+}
+.profile-halo{filter:drop-shadow(0 0 16px rgba(0,217,255,.3))}
+.hero-stats{border-color:rgba(105,132,255,.28)}
+.hero-stats div+div{border-color:rgba(105,132,255,.28)}
+footer{color:#aeb4db}
+@media(max-width:560px){
+  .shell{width:calc(100% - 22px);padding-top:14px}
+  .hero{padding:25px 19px 0}
+  .section-panel{padding:22px 18px;margin-top:16px;border-radius:27px}
+  .personal-card{gap:13px;padding:18px 15px;min-height:0;border-radius:24px}
+  .personal-avatar{flex-basis:76px;width:76px;height:76px;border-radius:20px}
+  .personal-divider{min-height:155px}
+  .small-label{font-size:.61rem;letter-spacing:.13em}
+  .personal-details strong{font-size:.95rem}
+  .button-pink,.button-instagram,.button-primary{min-height:55px;font-size:.91rem}
+  .friend-details-card{grid-template-columns:76px 2px minmax(0,1fr);gap:13px;padding:17px}
+  .friend-details-card .friend-copy strong{font-size:.95rem}
+  .section-heading h2{font-size:clamp(1.55rem,7vw,2.1rem)}
+  .section-subtitle{font-size:.88rem}
+  .social-link{padding:13px;border-radius:18px}
+}
+@media(max-width:360px){
+  .personal-card{gap:10px;padding:15px 11px}
+  .personal-avatar{flex-basis:64px;width:64px;height:64px}
+  .personal-details strong{font-size:.88rem}
+  .friend-details-card{grid-template-columns:64px 2px minmax(0,1fr);gap:10px;padding:13px}
+  .friend-details-card .friend-copy strong{font-size:.88rem}
+}
+
+/* User-supplied social icons */
+.social-icon .social-logo{object-fit:cover}
+.social-icon .id-card-logo{object-fit:contain;padding:2px;background:#111523}
+
+
+/* RGB profile ring: continuously rotating rainbow; online dot removed */
+.profile-halo{
+  background:conic-gradient(from 0deg,#ff003c 0deg,#ff7a00 45deg,#ffee00 90deg,#39ff14 135deg,#00e5ff 180deg,#176bff 225deg,#8b2cff 270deg,#ff00c8 315deg,#ff003c 360deg);
+  animation:rotate 2s linear infinite;
+}
+.online-mark{display:none!important}
+
+/* Force the profile RGB ring to keep spinning, even when device reduced-motion is enabled. */
+@keyframes profileRgbSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.profile-frame > .profile-halo {
+  animation-name: profileRgbSpin !important;
+  animation-duration: 2s !important;
+  animation-timing-function: linear !important;
+  animation-iteration-count: infinite !important;
+  animation-play-state: running !important;
+  will-change: transform;
+}
+
+
+/* DIGITAL PORTFOLIO: pure green status dot with a soft, continuous blink */
+@keyframes digitalPortfolioBlink {
+  0%, 100% {
+    opacity: 1;
+    background-color: #00ff00;
+    box-shadow: 0 0 5px #00ff00, 0 0 12px rgba(0,255,0,.48);
+  }
+  50% {
+    opacity: .58;
+    background-color: #00ff00;
+    box-shadow: 0 0 2px #00ff00, 0 0 6px rgba(0,255,0,.24);
+  }
+}
+.status .status-dot {
+  background: #00ff00 !important;
+  box-shadow: 0 0 5px #00ff00, 0 0 12px rgba(0,255,0,.48) !important;
+  animation: digitalPortfolioBlink 1.4s ease-in-out infinite !important;
+  animation-play-state: running !important;
+  will-change: opacity, box-shadow;
+}
+
+/* Soft mint-white highlight inside the green DIGITAL PORTFOLIO indicator. */
+@keyframes digitalPortfolioSoftBlink {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1.08);
+    box-shadow: 0 0 5px rgba(190,255,218,.72), 0 0 12px rgba(0,255,105,.58), 0 0 20px rgba(0,220,85,.22);
+  }
+  50% {
+    opacity: .78;
+    filter: brightness(.96);
+    box-shadow: 0 0 3px rgba(190,255,218,.48), 0 0 8px rgba(0,255,105,.36), 0 0 13px rgba(0,220,85,.14);
+  }
+}
+.status .status-dot {
+  background: radial-gradient(circle at 34% 28%, #f3fff8 0%, #d9ffea 13%, #8bffb8 31%, #20ed75 61%, #00c94b 100%) !important;
+  animation: digitalPortfolioSoftBlink 1.6s ease-in-out infinite !important;
+  animation-play-state: running !important;
+  will-change: opacity, filter, box-shadow;
+}
